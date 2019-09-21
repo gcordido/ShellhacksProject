@@ -1,0 +1,32 @@
+<section class="section-login" fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <mat-card fxFlex="350px" fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+
+      <mat-card-header>
+        <h1 mat-card-title>Login</h1>
+      </mat-card-header>
+
+      <mat-card-content>
+
+        <mat-form-field color="primary">
+          <input matInput type="text" placeholder="Email" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field color="primary">
+          <input matInput type="password" placeholder="Password" formControlName="password">
+        </mat-form-field>
+
+      </mat-card-content>
+
+      <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Login</button>
+      </mat-card-actions>
+
+
+    </mat-card>
+
+  </form>
+
+</section>

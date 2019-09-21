@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hurricane-app-42309": {
+      "hosting": {
+        "hurricanePro": [
+          "hurricane-app-42309"
+        ]
+      }
+    }
+  }
+}

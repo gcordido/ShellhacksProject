@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "hurricanePro",
+      "public": "dist/hurricanePro",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

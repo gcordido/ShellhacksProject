@@ -22,6 +22,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MapComponent } from './map/map.component';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AgmCoreModule} from "@agm/core";
+import { AzmapComponent } from './azmap/azmap.component';
 
 
 
@@ -51,7 +52,8 @@ import {AgmCoreModule} from "@agm/core";
     LoginComponent,
     SignupComponent,
     MainMenuComponent,
-    MapComponent
+    MapComponent,
+    AzmapComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

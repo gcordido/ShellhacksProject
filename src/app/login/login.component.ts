@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +14,7 @@ export class LoginComponent {
     password: new FormControl('', Validators.required)
   });
 
-  constructor(private fbAuth: AngularFireAuth, private router: Router) { }
+  constructor(private fbAuth: AngularFireAuth) { }
 
 
 
@@ -29,7 +28,6 @@ export class LoginComponent {
       .then(response => {
         console.log(response);
         console.log('Successfully logged in');
-        this.router.navigate(['/main-menu']);
       })
       .catch(error => {
         console.error(error);

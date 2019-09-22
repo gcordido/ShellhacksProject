@@ -16,15 +16,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { SignupComponent } from './signup/signup.component';
-import { MainMenuComponent } from './main-menu/main-menu.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatTableModule} from '@angular/material/table';
-import { MapComponent } from './map/map.component';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AgmCoreModule} from "@agm/core";
-import { AzmapComponent } from './azmap/azmap.component';
-
-
 
 @NgModule({
   imports: [
@@ -33,27 +24,18 @@ import { AzmapComponent } from './azmap/azmap.component';
     ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    AgmCoreModule.forRoot({
-      apiKey: environment.google_maps.apiKey
-    })
+    MatCardModule
   ],
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent,
-    MainMenuComponent,
-    MapComponent,
-    AzmapComponent
+    SignupComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

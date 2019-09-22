@@ -14,9 +14,6 @@ export const environment = {
     storageBucket: '',
     messagingSenderId: '301016079078',
     appId: '1:301016079078:web:c2f75f5fcc03401e6a7927'
-  },
-  google_maps: {
-    apiKey: 'AIzaSyD3M6YMisJJRr0coxZAm8Zq0WhZ4NWy19A'
   }
 };
 

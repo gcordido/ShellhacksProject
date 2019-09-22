@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
-
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { SignupComponent } from './signup/signup.component';
+import {MainMenuComponent} from './main-menu/main-menu.component';
+import {MapComponent} from './map/map.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {AgmCoreModule} from '@agm/core';
+
 
 @NgModule({
   imports: [
@@ -30,14 +35,23 @@ import { SignupComponent } from './signup/signup.component';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    AngularFirestoreModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.google_maps.apiKey
+    }),
   ],
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    MainMenuComponent,
+    MapComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

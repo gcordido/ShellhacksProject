@@ -4,6 +4,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 import {AngularFirestore} from '@angular/fire/firestore';
 
 
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -15,6 +16,7 @@ export class MapComponent implements OnInit {
   currentGeoloc: any;
   type: 'water' | 'gasoline' | 'canned food';
   loading = false;
+
 
 
   constructor(private route: ActivatedRoute, private db: AngularFirestore) {}
@@ -40,11 +42,9 @@ export class MapComponent implements OnInit {
   reqGeo() {
     this.loading = true;
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        geoloc => {
+      navigator.geolocation.getCurrentPosition(geoloc => {
          this.currentGeoloc = geoloc.coords;
       },
-
       error => {
         console.error(error);
       });

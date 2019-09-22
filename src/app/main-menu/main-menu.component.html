@@ -1,0 +1,30 @@
+<section class="section-mainmenu" fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div><h1>Resource Menu</h1></div>
+<div  class="mat-elevation-z8">
+
+<!---Water Resource-->
+      <mat-card fxFlex="350px" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+        <mat-card-actions>
+          <a [routerLink]="['/map']" [queryParams]="{ type: 'water' }" mat-raised-button color="primary">Water PlaceHold</a>
+        </mat-card-actions>
+      </mat-card>
+
+  <!---Gasoline Resource-->
+  <mat-card fxFlex="350px" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+    <mat-card-actions>
+      <a [routerLink]="['/map']" [queryParams]="{ type: 'gasoline' }" mat-raised-button color="primary">Gasoline PlaceHold</a>
+    </mat-card-actions>
+  </mat-card>
+
+  <!---Propane Resource-->
+  <mat-card fxFlex="350px" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+    <mat-card-actions>
+      <a [routerLink]="['/map']" [queryParams]="{ type: 'canned food' }" mat-raised-button color="primary">Canned Food PlaceHold</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+  <!---Add other rows below for new resources-->
+
+</section>

@@ -1,5 +1,17 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="currentGeoloc.latitude" [longitude]="currentGeoloc.longitude">
-  <agm-marker *ngFor="let geoloc of locations" [latitude]="geoloc.latitude" [longitude]="geoloc.longitude" [label]="type"></agm-marker>
+
+  <agm-marker
+
+    *ngFor="let geoloc of locations"
+
+    [latitude]="geoloc.latitude"
+
+    [longitude]="geoloc.longitude"
+
+    [label]="type">
+
+  </agm-marker>
+  
 </agm-map>

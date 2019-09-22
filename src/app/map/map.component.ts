@@ -13,7 +13,7 @@ export class MapComponent implements OnInit {
 
   locations: any;
   currentGeoloc: any;
-  type: 'water' | 'gasoline' | 'propane';
+  type: 'water' | 'gasoline' | 'canned food';
   loading = false;
 
 
